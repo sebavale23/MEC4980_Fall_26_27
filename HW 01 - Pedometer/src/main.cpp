@@ -252,3 +252,12 @@ void setReports(void) {
     Serial.println("Set accelerometer report... success!");
   }
 }
+
+
+
+void setReports(void) {
+  Serial.println("Setting desired reports");
+  if (!bno08x.enableReport(SH2_ACCELEROMETER)) {
+    Serial.println("Could not enable accelerometer");
+  } else {
+    Serial.println("Set accelerometer report... success!");
